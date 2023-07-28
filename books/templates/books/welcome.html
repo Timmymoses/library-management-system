@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Page</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1 class="my_color">Welcome to our library</h1>
+    <p>Always remember to handle our books with care</p>
+    {% for author in authors %}
+    <li>{{ author.first_name }} {{ author.last_name }}</li>
+    {% endfor %}
+</body>
+</html>
